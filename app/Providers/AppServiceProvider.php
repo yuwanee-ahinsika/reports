@@ -21,5 +21,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Vite::prefetch(concurrency: 3);
+
+        // Fallback to PclZip if native ZipArchive class is missing
+        if (!class_exists('\ZipArchive') && class_exists('\PhpOffice\PhpWord\Settings')) {
+            \PhpOffice\PhpWord\Settings::setZipClass(\PhpOffice\PhpWord\Settings::PCLZIP);
+        }
     }
 }
