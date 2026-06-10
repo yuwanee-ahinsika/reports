@@ -56,7 +56,7 @@ export default function DepartmentDashboard({ department, kpis, absentEmployees 
                     <div className="flex items-center justify-between mb-4">
                         <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Total Department Headcount</span>
                         <div className="p-2.5 rounded-xl bg-indigo-50 text-indigo-650">
-                            <Users className="h-5 w-5" />
+                            <Users className="h-5 w-5" /> 
                         </div>
                     </div>
                     <h3 className="text-3xl font-extrabold text-slate-900 mb-1">
@@ -67,7 +67,7 @@ export default function DepartmentDashboard({ department, kpis, absentEmployees 
                     </p>
                 </div>
 
-                {/* Absent Members count (dynamic by range) */}
+                {/* Absent Members count */}
                 <div className="bg-white border border-slate-200 rounded-2xl p-5 relative overflow-hidden group hover:border-pink-300 transition-all duration-300 shadow-sm">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-full -mr-4 -mt-4 transition-all group-hover:scale-125 duration-350" />
                     <div className="flex items-center justify-between mb-4">
