@@ -14,7 +14,8 @@ import {
     User,
     LogOut,
     TrendingUp,
-    Boxes
+    Boxes,
+    Info
 } from 'lucide-react';
 
 export default function AuthenticatedLayout({ header, children }) {
@@ -224,6 +225,18 @@ export default function AuthenticatedLayout({ header, children }) {
                     )}
                     
                     <div className="flex-1 p-6 md:p-8 max-w-7xl w-full mx-auto">
+                        {/* Notice Banner */}
+                        <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 border border-indigo-100/50 shadow-sm flex items-start sm:items-center gap-3.5 backdrop-blur-sm">
+                            <div className="p-2 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-650 text-white shadow-md shadow-indigo-550/20 shrink-0">
+                                <Info className="h-4 w-4" />
+                            </div>
+                            <div>
+                                <h4 className="text-[10px] font-bold text-indigo-950 uppercase tracking-wider">Automatic Report System</h4>
+                                <p className="text-xs text-slate-650 mt-0.5 leading-relaxed font-medium">
+                                    When new data is added to the database, it is automatically included in the reports.
+                                </p>
+                            </div>
+                        </div>
                         {children}
                     </div>
                 </main>
